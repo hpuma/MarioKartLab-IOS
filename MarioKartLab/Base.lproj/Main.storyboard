@@ -17,8 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="1kX-hM-BgT">
-                                <rect key="frame" x="0.0" y="0.0" width="549" height="982"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="I0N-k0-K5j" appends="YES" id="yeG-ut-5cu"/>
+                                </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="kart_0" translatesAutoresizingMaskIntoConstraints="NO" id="YNg-XA-2mD">
                                 <rect key="frame" x="-8" y="619" width="157" height="149"/>
@@ -80,11 +88,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="kartView0" destination="YNg-XA-2mD" id="Nc9-w1-a2f"/>
-                        <outlet property="kartView1" destination="eg3-T5-hza" id="dlq-o0-i6I"/>
-                        <outlet property="kartView2" destination="KKp-Al-ZHG" id="KRw-LW-lWA"/>
-                        <outlet property="kartView3" destination="36r-O8-Ib8" id="Lis-Qg-KlG"/>
-                        <outlet property="kartView4" destination="uLp-fT-NHh" id="B4e-Uj-OxM"/>
+                        <outlet property="kartView0" destination="YNg-XA-2mD" id="iOZ-nQ-e0j"/>
+                        <outlet property="kartView1" destination="eg3-T5-hza" id="Kt6-fH-1Bd"/>
+                        <outlet property="kartView2" destination="KKp-Al-ZHG" id="3X6-T4-B9A"/>
+                        <outlet property="kartView3" destination="36r-O8-Ib8" id="HVm-yi-smn"/>
+                        <outlet property="kartView4" destination="uLp-fT-NHh" id="svY-KO-KOX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -188,6 +196,11 @@
                         <action selector="didTapKartView:" destination="BYZ-38-t0r" id="RmG-95-LKA"/>
                     </connections>
                 </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" numberOfTapsRequired="1" id="I0N-k0-K5j">
+                    <connections>
+                        <action selector="didLongPress:" destination="BYZ-38-t0r" id="ca0-eQ-Qec"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-17.39130434782609" y="99.776785714285708"/>
         </scene>
